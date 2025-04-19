@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+pnpm-lock.yaml
+
+# pnpm store (if not globally scoped)
+.pnpm-store/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Monorepo
+packages/**/node_modules/
+apps/**/node_modules/
