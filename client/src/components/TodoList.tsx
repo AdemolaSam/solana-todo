@@ -126,14 +126,14 @@ const TodoList = () => {
           </div>
 
           <div className="mb-2">
-            <Typography className="p-2 mb-2">Due Date/Time</Typography>
+            <Typography className="p-2">Due Date/Time</Typography>
             <Input
               crossOrigin="anonymous"
               type="datetime-local"
               name="dueDate"
               value={newTodo.dueDate}
               onChange={handleFormChange}
-              className="p-2 md:p-3 border rounded-lg"
+              className="p-2 md:p-3 border rounded-lg mb-2"
             />
           </div>
 
@@ -158,7 +158,7 @@ const TodoList = () => {
         <ul className="space-y-1">
           {todos.map((todo, idx) => (
             <Card
-              className="rounded-tr-3xl rounded-bl-3xl bg-gray-400 flex flex-col"
+              className="rounded-tr-3xl rounded-bl-3xl bg-gray-400 flex flex-col mb-3"
               key={todo._id || idx}
             >
               <Typography className="p-2 font-bold text-xl">
@@ -170,10 +170,10 @@ const TodoList = () => {
                   : todo.description}
               </Typography>
               <div className="flex justify-between mb-2 p-2">
-                <span className="">
+                <span className="text-sm">
                   {new Date(todo.dueDate).toLocaleString()}
                 </span>
-                <Button variant={"filled"} className="p-1 italic">
+                <Button variant={"filled"} className="p-1 italic text-sm">
                   {todo.status || "pending"}
                 </Button>
               </div>
