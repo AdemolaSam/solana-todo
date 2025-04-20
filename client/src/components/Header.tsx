@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="py-6 flex justify-between items-center border-b bg-gray-400 px-6">
       <div className="text-lg font-bold">
-        <Link href={"/"} className="pr-5">
+        <Link href={"/"} className="pr-5 md:text-2xl">
           📝 Todo Wallet App
         </Link>
         {user ? (

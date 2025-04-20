@@ -59,15 +59,14 @@ const TodoList = () => {
   };
 
   const handleAddTodo = async () => {
-    console.log({ user });
     console.log({ newTodo });
     if (
-      newTodo.title === "" ||
-      newTodo.description === "" ||
-      newTodo.createdBy === "" ||
-      newTodo.dueDate
+      newTodo.title.length < 1 ||
+      newTodo.createdBy.length < 1 ||
+      newTodo.description.length < 1 ||
+      newTodo.dueDate.length < 1
     ) {
-      alert("All fields must be filled");
+      alert("All fields are require");
       return;
     }
 
@@ -86,6 +85,8 @@ const TodoList = () => {
         description: "",
         dueDate: "",
       });
+
+      alert("New todo added!");
     } catch (error) {
       alert("Failed to add todo, please try again");
       console.error("Failed to add todo:", error);
