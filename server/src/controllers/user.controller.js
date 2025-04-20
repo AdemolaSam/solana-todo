@@ -6,7 +6,7 @@ exports.getUser = async (req, res, next) => {
   if (!user) {
     return req.status(404).json({ error: "User not found" });
   }
-  return res.status(200).json(user);
+  return res.status(200).json({ user });
 };
 
 exports.updateUser = async (req, res, next) => {
